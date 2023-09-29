@@ -1,16 +1,10 @@
-import { AboutUs } from './AboutUs/AboutUs';
-import { Hero } from './Hero';
-import { ServicesPreview } from './ServicesPreview/ServicesPreview';
-import { WhyUs } from './WhyUs';
+import { AboutOurWork } from "./AboutOurWork/AboutOurWork";
+import { Hero } from "./Hero";
 
 export const HomePage = () => (
   <div className="home-page">
     <Hero />
-  
-    <WhyUs />
 
-    <AboutUs />
-
-    <ServicesPreview />
+    <AboutOurWork />
   </div>
 );

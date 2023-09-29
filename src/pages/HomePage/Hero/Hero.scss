@@ -1,51 +1,59 @@
 @import "../../../styles/global-imports";
 
 .hero {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-
-  position: relative;
-  
-  margin-top: 38px;
-
-  @include onMobileAndTablet {
-    display: flex;
-    flex-direction: column-reverse;
-
-    margin-top: 10px;
-  }
+  background: url("../../../images/home/hero.png") no-repeat center;
+  background-size: cover;
+  width: 97vw;
+  height: 600px;
+  margin-top: 20px;
 
   @include onMobile {
-    align-items: flex-start
+    height: 680px;
   }
 
-  &__main-image {
-    &--item {
-      @include onMobile {
-        width: 288px;
-      }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 44px;
+    position: relative;
+
+    @include onMobileAndTablet {
+      padding-top: 30px;
+      gap: 0;
     }
   }
 
-  &__titles {
-    width: 592px;
-    margin-bottom: 16px;
+  &__arrows {
+    height: 500px;
+    width: 40px;
+    margin-top: 50px;
+    background: url("../../../images/icons/arrows-hero.svg") no-repeat center;
+    background-size: contain;
 
-    &--title {
-      line-height: 70px;
-    }
-
-    &--subtitle {
-      color: $c-blue;
+    @include onTablet {
+      position: absolute;
+      left: -60px;
     }
 
     @include onMobile {
-      width: 238px;
+      position: absolute;
+      left: -10px;
+      top: 214px;
+      height: 320px;
+      margin-top: 0;
     }
   }
-  
+
+  &--title {
+    @extend %italic-text;
+    color: $c-white;
+  }
+
   &__main-content {
+    margin-top: 20px;
+    color: $c-white;
+
     &--text {
       margin-bottom: 26px;
       width: 556px;
@@ -57,91 +65,34 @@
     }
   }
 
-  &__link-arrow {
-    position: absolute;
-    left: 800px;
+  &__images {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
 
-    @include onTablet {
-      top: 900px;
-      left: 280px;
-
-      height: 90px;
-      width: 90px;
-    }
-    
-    @include onMobile {
-      top: 480px;
-      left: 100px;
-  
-      height: 60px;
-      width: 60px;
-    }
-  }
-
-  
-  &--first-arrow,
-  &--second-arrow {
-    position: absolute;
-
-    background: url("../../../images/icons/hero-image-1.svg") no-repeat;
-    
-    height: 96%;
-    width: 34%;
-    
-    z-index: -1;
-    
-    @include onTablet {
-      width: 64%;      
+    @include onMobileAndTablet {
+      margin-top: 0;
     }
 
     @include onMobile {
-      width: 60%;
-      height: 34%;
-
-      background: url("../../../images/icons/hero-arrow-mobile.svg") no-repeat center;
-      background-size: contain;
+      position: absolute;
+      right: 0;
+      top: 222px;
     }
-  }
-  
-  &--first-arrow {
-    top: 310px;
-    left: 14px;
-    
-    @include onTablet {
-      top: 526px;
-      left: -187px;   
-    }
-    
-    @include onMobile {
-      top: 314px;
-      left: -98px;
-    }
-  }
 
-  &--second-arrow {
-    transform: scaleX(-1);
+    &--item {
+      @include onTablet {
+        width: 92px;
+      }
 
-    overflow: hidden;
+      @include onMobile {
+        width: 80px;
+      }  
 
-    top: 300px;
-    right: -56px;
-
-    width: 34%;
-        
-    @include onTablet {
-      width: 34%;
-      top: 501px;
-      right: -64px;
-
-      background-position: -190px 0;
-    }
-    
-    @include onMobile {
-      width: 50%;
-      top: 318px;
-      right: -14px;
-
-      background-position: 0px 0;
+      &:nth-child(2) {
+        filter: grayscale(100%) sepia(100%) hue-rotate(340deg);
+      }
     }
   }
 }

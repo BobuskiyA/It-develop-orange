@@ -4,7 +4,7 @@ import './OurAchievement.scss';
 
 export const OurAchievement = () => (
   <div className="our-achievement our-achievement-container">
-    <h1 className="blue-text our-achievement--title">
+    <h1 className="primary-text our-achievement--title">
       Наші досягнення
     </h1>
 

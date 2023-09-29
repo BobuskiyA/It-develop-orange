@@ -9,7 +9,7 @@ export const Footer = () => (
     <div className="container">
       <div className="footer__top">
         <h1 className="footer--title">
-          Кінець сторінки. Початок вашого успіху!
+          Кінець сторінки.
         </h1>
 
         <h4 className="footer--text">
@@ -23,13 +23,13 @@ export const Footer = () => (
         <div className="footer--button">
           <Button 
             content={'Зв`яжіться зі мною'}
-            color={'blue'}
+            color={'primary'}
           />
         </div>
 
         <div className="footer__links">
           <div className="footer__about-us">
-            <p className="blue-text footer__links--link-title">
+            <p className="primary-text footer__links--link-title">
               Про нас
             </p>
 
@@ -45,7 +45,7 @@ export const Footer = () => (
           </div>
 
           <div className="footer__docs">
-          <p className="blue-text footer__links--link-title">
+          <p className="primary-text footer__links--link-title">
               Документи
             </p>
 

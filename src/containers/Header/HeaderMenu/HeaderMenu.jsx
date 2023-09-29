@@ -69,8 +69,9 @@ export const HeaderMenu = () => {
 
         <div className="header-menu--button">        
           <Button
-            color={'blue'}
+            color={'primary'}
             content={'Замовити'}
+            onClick={handleCloseMenu}
           />
         </div>
       </div>

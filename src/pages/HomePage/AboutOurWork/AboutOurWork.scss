@@ -1,0 +1,21 @@
+@import "../../../styles/global-imports";
+
+.about-our-work {
+  display: flex;
+  margin-top: 120px !important;
+  
+  @include onMobileAndTablet {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__content {
+    width: fit-content;
+  }
+
+  &--our-goal {
+    @extend %bold-text;
+    font-size: inherit;
+    margin-top: 24px;
+  }
+}

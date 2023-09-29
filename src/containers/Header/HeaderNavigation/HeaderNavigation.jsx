@@ -1,8 +1,9 @@
 import { AboutUsLinks } from '../../../components/AboutUsLinks';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './HeaderNavigation.scss';
 import classNames from 'classnames';
+import { Button } from '../../../components/Button';
 
 const getNavClass = ({ isActive }) => classNames(
   'header-navigatiion--item', {
@@ -28,6 +29,13 @@ export const HeaderNavigation = () => (
       ))}
     </ul>
 
-    <Link className='header-navigatiion--button' to="/form">Замовити</Link>
+    {/* <Link className='header-navigatiion--button' to="/form">Замовити</Link> */}
+    <div className='header-navigatiion--button'>
+      <Button
+        content={'Замовити'}
+        to={'/form'}
+      />
+    </div>
+    
   </nav>
   );

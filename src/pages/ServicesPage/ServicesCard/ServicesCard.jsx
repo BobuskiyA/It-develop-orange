@@ -48,7 +48,7 @@ export const ServicesCard = ({
       <div className="services-card--button">
         <Button 
           content={'Детальніше'}
-          color={'blue'}  
+          color={'primary'}  
         />
       </div>
     </li>

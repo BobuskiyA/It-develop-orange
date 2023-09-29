@@ -1,5 +1,4 @@
 import { ServicesCard } from './ServicesCard/ServicesCard';
-import { Сontacts } from './Сontacts';
 import  ServicesCardContent from './ServicesCardContent/ServicesCardContent.json';
 import './ServicesPage.scss';
 
@@ -8,11 +7,10 @@ import { Pagination } from 'swiper';
 
 import './Swiper/swiper.scss'; // core Swiper
 import './Swiper/pagination/pagination.scss'; // Pagination module
-import { ServicesPageHead } from './ServicesPageHead/ServicesPageHead';
 
 export const ServicesPage = () => (
   <div className="services-page">
-    <ServicesPageHead />
+    {/* <ServicesPageHead /> */}
 
     <div className="services-page__content">
       <ul className="services-page__list">
@@ -55,8 +53,6 @@ export const ServicesPage = () => (
           </SwiperSlide>
         ))}
     </Swiper>
-
-      <Сontacts />
     </div>
   </div>
 );

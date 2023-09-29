@@ -6,7 +6,7 @@ h1 {
   font-size: 70px;
   font-style: normal;
   font-weight: 400;
-  line-height: 115px;
+  line-height: 86.4px;
   text-transform: uppercase;
 
   @include onMobile {
@@ -61,7 +61,7 @@ a {
     line-height: 14px; 
   }
 
-  @include hover(color, $c-blue-secondary);
+  @include hover(color, $c-secondary);
 }
 
 %body-text {
@@ -77,6 +77,26 @@ a {
   }
 }
 
-.blue-text {
-  color: $c-blue;
+%small-text {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+%italic-text {
+  font-family: Roboto, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+%bold-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.primary-text {
+  color: $c-primary;
 }

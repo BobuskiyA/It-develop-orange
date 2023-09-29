@@ -1,18 +1,20 @@
 @import "../../styles/global-imports";
 
 .services-page {
-  &__content {
-    margin: 0 auto;
+  
     max-width: 1248px;
+
+    @include onDesktop {
+      width: 80vw;
+    }
 
     @include onTablet {
       max-width: 100%;
     }
 
     @include onMobile {
-      max-width: 288px;
+      max-width: 80vw;
     }
-  }
 
   &__list {
     margin-top: 70px;
@@ -36,12 +38,12 @@
       }
 
       &-bullet {
-        width: 16px;
+        width: 8px;
         height: 16px;
         background-color: $c-grey;
 
         &-active {  
-          background-color: $c-blue !important;
+          background-color: $c-primary !important;
         }
       }
     }

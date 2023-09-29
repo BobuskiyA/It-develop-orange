@@ -1,0 +1,44 @@
+@import "../../../../styles/global-imports";
+
+.benefits {
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+
+  @include onMobileAndTablet {
+    gap: 18px;
+  }
+
+  @include onMobile {
+    overflow-y: scroll;
+    max-width: 84vw;
+
+    position: absolute;
+    top: 460px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    background-color: $c-white;
+    padding: 20px;
+    @extend %small-text;
+
+    @include onMobile {
+      min-width: max-content;
+
+      &:last-child {
+        margin-right: 12px;
+      }
+    }
+
+    &--image {
+      width: 18px;
+      margin-right: 8px;
+
+      @include onMobileAndTablet {
+        margin-right: 12px;
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-import { RoundLink } from "../../../components/RoundLink";
 
 import './ServicesPageHead.scss';
 
@@ -10,7 +9,6 @@ export const ServicesPageHead = () => (
       </h1>
 
       <div className="services-page-head--link">
-        <RoundLink color={'blue'} />
       </div>
     </div>
   </div>
