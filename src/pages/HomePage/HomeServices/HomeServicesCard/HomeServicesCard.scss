@@ -1,0 +1,45 @@
+@import "../../../../styles/global-imports";
+
+.home-services-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  border-bottom: 1px solid $c-black;
+
+  background: url("../../../../images/home/lines.svg") no-repeat right;
+  background-size: 30%;
+  
+  padding-bottom: 20px;
+  height: 440px;
+  
+  @include onMobileAndTablet {
+    background-image: none;
+    height: 340px;
+  }
+
+  @include onTablet {
+    margin-top: 40px;
+  }
+
+  &__button {
+    margin-top: 70px;
+    width: 418px;
+    height: 94px;
+
+    @include onMobile {
+      width: 80vw;
+    }
+  }
+
+  &--text {
+    @extend %h3;
+    font-weight: 400;
+    text-wrap: balance;
+    max-width: 780px;
+  }
+
+  .button--primary {
+    @extend %h2   
+  }
+}

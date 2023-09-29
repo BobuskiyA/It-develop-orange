@@ -28,4 +28,9 @@
     color: $c-primary;
     border: 1px solid $c-primary;
   }
+
+  &--black {
+    background-color: $c-black;
+    color: $c-white;
+  } 
 }

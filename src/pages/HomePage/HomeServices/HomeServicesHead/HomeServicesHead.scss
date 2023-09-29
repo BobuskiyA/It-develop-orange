@@ -1,0 +1,56 @@
+@import "../../../../styles/global-imports";
+
+.home-services-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 140px;
+
+  position: relative;
+
+  @include onMobileAndTablet {
+    margin-top: 60px;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4% 8%;
+    background-color: $c-green-primary;
+    border-radius: 152px;
+
+    &--arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      padding: 10%;
+      width: 43px;
+      height: 43px;
+    
+      border-radius: 100%;
+      background-color: $c-green-secondary;
+      content: url("../../../../images/icons/done-icon.svg");
+
+      @include onMobile {
+        padding: 4%;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &--arrows {
+    background: url("../../../../images/icons/arrow-green.svg") no-repeat center;
+    height: 44px;
+    width: 65%;
+    background-size: contain;
+    
+    &-first {
+      transform: rotate(180deg);
+    }
+  }
+}

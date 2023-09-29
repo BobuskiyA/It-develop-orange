@@ -1,5 +1,5 @@
 import { ServicesCard } from './ServicesCard/ServicesCard';
-import  ServicesCardContent from './ServicesCardContent/ServicesCardContent.json';
+import  ServicesCardContent from '../../components/ServicesCardContent/ServicesCardContent.json';
 import './ServicesPage.scss';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,23 +10,19 @@ import './Swiper/pagination/pagination.scss'; // Pagination module
 
 export const ServicesPage = () => (
   <div className="services-page">
-    {/* <ServicesPageHead /> */}
-
     <div className="services-page__content">
       <ul className="services-page__list">
-        {ServicesCardContent.map(({
-          id,
-          photo_link,
-          title,
-          content,
-        }) => (
-          <ServicesCard
-            id={id}
-            photo_link={photo_link}
-            title={title}
-            content={content}
-          />
-        ))}
+        {ServicesCardContent.map(({ id, photo_link, title, content }) => {
+          return id !== 4 ? (
+            <ServicesCard
+              key={id}
+              id={id}
+              photo_link={photo_link}
+              title={title}
+              content={content}
+            />
+          ) : null
+        })}
       </ul>
 
       <Swiper
@@ -37,22 +33,19 @@ export const ServicesPage = () => (
         modules={[Pagination]}
         className="services-page__slider"
       >
-      {ServicesCardContent.map(({
-          id,
-          photo_link,
-          title,
-          content,
-        }) => (
-          <SwiperSlide>
-            <ServicesCard
-              id={id}
-              photo_link={photo_link}
-              title={title}
-              content={content}
+        {ServicesCardContent.map(({ id, photo_link, title, content }) => {
+          return id !== 4 ? (
+            <SwiperSlide key={id}> 
+              <ServicesCard
+                id={id}
+                photo_link={photo_link}
+                title={title}
+                content={content}
               />
-          </SwiperSlide>
-        ))}
-    </Swiper>
+            </SwiperSlide>
+          ) : null;
+        })}
+      </Swiper>
     </div>
   </div>
 );

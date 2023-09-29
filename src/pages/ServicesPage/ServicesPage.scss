@@ -38,9 +38,9 @@
       }
 
       &-bullet {
-        width: 8px;
+        width: 16px;
         height: 16px;
-        background-color: $c-grey;
+        background-color: $c-grey-primary;
 
         &-active {  
           background-color: $c-primary !important;

@@ -11,6 +11,7 @@ export const Button = ({
   const buttonClasses = classNames('button', {
     'button--primary': color === 'primary',
     'button--secondary': color === 'secondary',
+    'button--black': color === 'black',
   });
 
   return (

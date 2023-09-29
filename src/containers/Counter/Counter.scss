@@ -1,0 +1,110 @@
+@import "../../styles/global-imports";
+
+.counter {  
+  margin-top: 120px !important;
+
+  position: relative;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding-bottom: 60px;
+
+    border-bottom: 1px solid $c-black;
+
+    @include onMobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      
+      border-radius: 4px;
+      background-color: $c-grey-secondary;
+      
+      padding: 4px 30px;
+
+      &::before {
+        content: url("../../images/icons/skr.svg");
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__achievement {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include onMobileAndTablet {
+      gap: 20px;
+    }
+    
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      @include onMobileAndTablet {
+        flex-direction: column;
+        align-items: normal;
+        margin-top: 20px;
+        border-bottom: 1px solid $c-grey-secondary;
+      }
+    }
+
+    &--title {
+      color: $c-grey-primary;
+      text-wrap: balance;
+
+      @include onMobileAndTablet {
+        text-align: start;
+      }
+
+      @include onMobile {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+    }
+    
+    &--number {
+      @extend %numb;
+
+      @include onMobile {
+        text-align: end;
+      }
+    }
+  }
+
+  &__help {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 144px;
+    margin-top: 20px;
+
+    background-color: $c-primary;
+
+    border-radius: 8px;
+
+    @include onMobile {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    &--button {
+      width: 200px;
+      height: 48px;
+    }
+  }
+}

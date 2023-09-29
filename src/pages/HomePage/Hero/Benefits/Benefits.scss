@@ -10,11 +10,24 @@
   }
 
   @include onMobile {
-    overflow-y: scroll;
+    overflow-x: scroll;
     max-width: 84vw;
 
     position: absolute;
     top: 460px;
+    left: 0;
+
+    &::-webkit-scrollbar {
+      height: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $c-primary;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color: $c-white;
+    }
   }
 
   &__item {
