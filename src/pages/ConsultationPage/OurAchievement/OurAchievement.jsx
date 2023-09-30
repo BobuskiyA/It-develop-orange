@@ -4,9 +4,11 @@ import './OurAchievement.scss';
 
 export const OurAchievement = () => (
   <div className="our-achievement our-achievement-container">
-    <h1 className="primary-text our-achievement--title">
-      Наші досягнення
-    </h1>
+    <span className="primary-text">
+      <h1 className="our-achievement--title">
+        Наші досягнення
+      </h1>
+    </span>
 
     <ul className="our-achievement__list">
       {Object.entries(OurAchievementContent).map(([title, text]) => (

@@ -4,8 +4,15 @@ import { HeaderNavigation } from "./HeaderNavigation";
 import './Header.scss';
 import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
 
+import { motion } from 'framer-motion';
+
 export const Header = () => (
-  <header className="header container">
+  <motion.header  
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }} 
+    className="header container"
+  >
     <Logo />
 
     <HeaderNavigation />
@@ -13,5 +20,5 @@ export const Header = () => (
     <div className="header--menu">
       <HeaderMenu />
     </div>
-  </header>
+  </motion.header>
 );

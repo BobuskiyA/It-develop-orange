@@ -2,42 +2,29 @@
 
 .services-page-head {
   display: flex;
-  align-items: center;
-
+  justify-content: center;
   position: relative;
 
   margin: 0 auto;
 
-  width: 97.7vw;
-  height: 470px;
-  background: url("../../../images/services.png") center no-repeat;
-  background-size: cover;
+  width: 100vw;
+  height: 776px;
+  background: url("../../../images/services/services-head.png") center no-repeat;
+  filter: grayscale(100%) sepia(100%) hue-rotate(340deg);
 
+  @include onTablet {
+    background-image: url("../../../images/services/services-head-tablet.png");
+    height: 556px;
+  }
+  
   @include onMobile {
-    height: 294px;
+    background-image: url("../../../images/services/services-head-mobile.png");
+    height: 326px;
   }
 
   &--title {
-    color: $c-white;
-  }
-
-  
-  &--link {
-    @include onDesktop {
-      position: absolute;
-      top: 285px;
-      left: 566px;
-    }
-    
-    @include onMobile {
-      position: absolute;
-      top: 210px;
-    }
-  }
-
-  &--content {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    position: absolute;
+    top: 6%;
+    color: $c-black;
   }
 }

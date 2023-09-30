@@ -23,15 +23,13 @@ export const App = () => (
         </div>
 
         <div className="app__main">
-          
-            <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/about' element={<HomePage />} />  
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/consultation" element={<ConsultationPage />} />
-              <Route path='/form' element={<FormPage />} />
-            </Routes>
-            
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<HomePage />} />  
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/consultation" element={<ConsultationPage />} />
+            <Route path='/form' element={<FormPage />} />
+          </Routes>            
         </div>
 
         <div className="app__footer">

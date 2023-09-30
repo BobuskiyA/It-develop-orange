@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
 import './FormPage.scss';
+import { motion } from 'framer-motion';
 
 export const FormPage = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,12 @@ export const FormPage = () => {
   };
 
   return (
-    <div className="container">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container"
+    >
       <div className='form'>
         <h2 className='form__title'>Зворотній зв’язок</h2>
         <form onSubmit={handleSubmit}>
@@ -168,6 +174,6 @@ export const FormPage = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -1,0 +1,32 @@
+@import "../../../styles/global-imports";
+
+.add {
+  margin-top: 100px;
+  background: url("../../../images/consultation/consultation-add.png")  no-repeat;
+  width: 100vw;
+  height: 710px;
+
+  color: $c-white;
+
+  display: flex;
+  align-items: center;
+
+  @include onTablet {
+    background-position: center;
+    background-size: auto;
+  }
+
+  @include onMobile {
+    background-position: center;
+    background-size: auto;
+    height: 376px;
+  }
+
+  &--title {
+    @extend %italic-text;
+  }
+
+  &--text {
+    text-wrap: pretty;
+  }
+}

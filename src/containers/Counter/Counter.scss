@@ -14,7 +14,7 @@
 
     border-bottom: 1px solid $c-black;
 
-    @include onMobile {
+    @include onMobileAndTablet {
       flex-direction: column;
       align-items: flex-start;
       gap: 20px;

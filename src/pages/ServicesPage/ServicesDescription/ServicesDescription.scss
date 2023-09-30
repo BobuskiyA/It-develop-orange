@@ -1,0 +1,36 @@
+@import "../../../styles/global-imports";
+
+.services-description {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+
+  &--title {
+    font-weight: 700;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+    border-radius: 4px;
+    background-color: $c-secondary;
+    
+    padding: 4px 12px 4px 22px;
+    max-width: 268px;
+  
+    &::before {
+      content: url("../../../images/icons/skr.svg");
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__label {
+    height: 214px;
+    width: 850px;
+    background: url("../../../images/icons/label.svg") no-repeat;
+    background-size: contain;
+  }
+}
