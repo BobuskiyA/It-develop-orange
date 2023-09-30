@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/It-develop-orange/static/css/main.7bfc69d5.css",
+    "main.js": "/It-develop-orange/static/js/main.eae7b7ff.js",
+    "static/media/consultation-head.png": "/It-develop-orange/static/media/consultation-head.43de886affd3eceae3a6.png",
+    "static/media/consultation-add.png": "/It-develop-orange/static/media/consultation-add.4dafbd9ea1ff3c9598c0.png",
+    "static/media/design-card.png": "/It-develop-orange/static/media/design-card.4a3639022a1dfed8701e.png",
+    "static/media/develop-card.png": "/It-develop-orange/static/media/develop-card.6a5f1af78fd141f16c71.png",
+    "static/media/analytics-card.png": "/It-develop-orange/static/media/analytics-card.8f4f90c4ff9b4bc2cc85.png",
+    "static/media/hero.png": "/It-develop-orange/static/media/hero.ee08eb485d71e04eb199.png",
+    "static/media/services-head.png": "/It-develop-orange/static/media/services-head.b7aafd5ce3c097f48bf6.png",
+    "static/media/services-head-tablet.png": "/It-develop-orange/static/media/services-head-tablet.25559fe0112aab612fc0.png",
+    "static/media/label.svg": "/It-develop-orange/static/media/label.eef13cdbd504f295ffcd.svg",
+    "static/media/hero-secondary.png": "/It-develop-orange/static/media/hero-secondary.5c0f1c54f069495869a3.png",
+    "static/media/services-head-mobile.png": "/It-develop-orange/static/media/services-head-mobile.0ff433172a349ca1cadf.png",
+    "static/media/done-icon.svg": "/It-develop-orange/static/media/done-icon.5cfadc05b68a67bfbd4f.svg",
+    "static/media/lines.svg": "/It-develop-orange/static/media/lines.190984b0aa5d07cbf1c9.svg",
+    "static/media/cross.svg": "/It-develop-orange/static/media/cross.ed037f5a0c7cee05f49c.svg",
+    "static/media/arrows-hero.svg": "/It-develop-orange/static/media/arrows-hero.3d41bb20b02802b00139.svg",
+    "static/media/skr.svg": "/It-develop-orange/static/media/skr.9431f9ecaeeb69eb8eb0.svg",
+    "static/media/arrow-green.svg": "/It-develop-orange/static/media/arrow-green.225d4fd7e12504a194fa.svg",
+    "index.html": "/It-develop-orange/index.html",
+    "static/media/menu-burger.svg": "/It-develop-orange/static/media/menu-burger.ffb7ec097009573b5540.svg",
+    "main.7bfc69d5.css.map": "/It-develop-orange/static/css/main.7bfc69d5.css.map",
+    "main.eae7b7ff.js.map": "/It-develop-orange/static/js/main.eae7b7ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bfc69d5.css",
+    "static/js/main.eae7b7ff.js"
+  ]
+}
