@@ -2,7 +2,9 @@
 
 .services-page {
   
+  &__content {
     max-width: 1248px;
+    margin: 0 auto;
 
     @include onDesktop {
       width: 80vw;
@@ -15,6 +17,7 @@
     @include onMobile {
       max-width: 80vw;
     }
+  }
 
   &__list {
     margin-top: 70px;

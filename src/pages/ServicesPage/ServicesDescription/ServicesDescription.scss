@@ -5,6 +5,23 @@
   align-items: center;
   margin-top: 60px;
 
+  @include onMobileAndTablet {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onMobileAndTablet {
+      align-items: center;
+      text-align: center;
+      max-width: 78vw;
+    }
+  }
+
   &--title {
     font-weight: 700;
   }
@@ -17,7 +34,7 @@
     border-radius: 4px;
     background-color: $c-secondary;
     
-    padding: 4px 12px 4px 22px;
+    padding: 4px 22px 4px 12px;
     max-width: 268px;
   
     &::before {
@@ -32,5 +49,15 @@
     width: 850px;
     background: url("../../../images/icons/label.svg") no-repeat;
     background-size: contain;
+    
+    @include onMobileAndTablet {
+      height: 314px;
+      width: 100vw;
+      background-position: 10vw;
+    }
+
+    @include onMobile {
+      height: 34vw;
+    }
   }
 }

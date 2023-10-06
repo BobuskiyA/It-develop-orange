@@ -15,7 +15,7 @@ import { ConsultationPage } from './pages/ConsultationPage';
 import { FormPage } from './pages/Form/FormPage';
 
 export const App = () => (
-  <AnimatePresence mode="popLayout">
+  <AnimatePresence>
     <HashRouter>
       <div className="app">
         <div className="app__header">

@@ -15,7 +15,9 @@
   
   @include onMobileAndTablet {
     background-image: none;
-    height: 340px;
+    height: max-content;
+    margin-bottom: 20px;
+    gap: 12px;
   }
 
   @include onTablet {
@@ -26,9 +28,11 @@
     margin-top: 70px;
     width: 418px;
     height: 94px;
-
-    @include onMobile {
+    
+    @include onMobileAndTablet {
+      margin-top: 12px;
       width: 80vw;
+      height: 80px;
     }
   }
 

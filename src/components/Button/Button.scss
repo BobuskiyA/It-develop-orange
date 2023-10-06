@@ -19,8 +19,8 @@
     background-color: $c-primary;
     color: $c-white;
 
-    @include hover(background-color, $c-secondary);
     @include hover(color, $c-white);
+    @include hover(background-color, $c-secondary);
   }
 
   &--secondary {

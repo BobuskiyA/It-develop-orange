@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './HeaderNavigation.scss';
 import classNames from 'classnames';
 import { Button } from '../../../components/Button';
+import { BackToUp } from '../../../components/BackToUp/BackToUp';
 
 const getNavClass = ({ isActive }) => classNames(
   'header-navigatiion--item', {
@@ -21,7 +22,8 @@ export const HeaderNavigation = () => (
         >
           <NavLink
             to={containerName}
-            className={getNavClass}  
+            className={getNavClass}
+            onClick={BackToUp}
           >
             {label}
           </NavLink>
@@ -29,13 +31,10 @@ export const HeaderNavigation = () => (
       ))}
     </ul>
 
-    {/* <Link className='header-navigatiion--button' to="/form">Замовити</Link> */}
-    <div className='header-navigatiion--button'>
+    <div className="header-navigatiion--button">      
       <Button
         content={'Замовити'}
-        to={'/form'}
       />
     </div>
-    
   </nav>
   );

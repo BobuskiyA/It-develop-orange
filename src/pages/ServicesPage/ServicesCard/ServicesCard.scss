@@ -24,8 +24,6 @@
     margin-bottom: 80px;
     color: $c-white;
 
-    z-index: -1;
-
     @include onMobile {
       height: 410px;
     }

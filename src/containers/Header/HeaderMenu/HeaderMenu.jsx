@@ -6,6 +6,7 @@ import { AboutUsLinks } from '../../../components/AboutUsLinks';
 import { Button } from '../../../components/Button';
 
 import './HeaderMenu.scss';
+import { BackToUp } from '../../../components/BackToUp/BackToUp';
 
 const getNavClass = ({ isActive }) => classNames(
   'header-menu__list--item', {
@@ -25,6 +26,8 @@ export const HeaderMenu = () => {
   const handleCloseMenu = () => {
     setIsActiveMenu(false);
     classListBody.remove('body-with-menu');
+
+    BackToUp();
   };
 
   return (
@@ -69,7 +72,7 @@ export const HeaderMenu = () => {
 
         <div className="header-menu--button">        
           <Button
-            color={'primary'}
+            color={'blue'}
             content={'Замовити'}
             onClick={handleCloseMenu}
           />
