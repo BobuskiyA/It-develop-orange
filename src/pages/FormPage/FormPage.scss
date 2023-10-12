@@ -60,44 +60,41 @@
   }
 
   span{
-  position: relative;
-  border-right: 1px solid gray;
-  font-family: Roboto;
-  font-size: 14px;
-  padding-right: 8px;
-  color: #000;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-input{
-  border-radius: 5px;
-  border: 1px solid rgba(66, 80, 102, 0.40);
-  background: #FFF;
-  box-shadow: 0px 2px 4px 0px rgba(66, 80, 102, 0.10);
-
-  padding: 12px;  
-  
-  @include onMobile {
-    padding: 12px 0;
+    position: relative;
+    border-right: 1px solid gray;
+    font-family: Roboto;
+    font-size: 14px;
+    padding-right: 8px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
+  
+  input{
+    border-radius: 5px;
+    border: 1px solid rgba(66, 80, 102, 0.40);
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(66, 80, 102, 0.10);
+  
+    padding: 12px;  
+    
+    @include onMobile {
+      padding: 12px 0;
+    }
+  }
+  
+  textarea {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    resize: none;
+    overflow: hidden;
+    height: 100px;
+  }  
 }
-textarea {
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  resize: none;
-  overflow: hidden;
-  height: 100px;
-}
-
-
-}
-
-
 
 .input{
   padding: 12px;
@@ -122,10 +119,8 @@ textarea {
 }
 
   &-phone{
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
+    
+    border: none !important;
     width: 100%;
   }
 

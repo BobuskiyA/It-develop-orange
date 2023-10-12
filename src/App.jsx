@@ -12,7 +12,8 @@ import { Footer } from './containers/Footer';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ConsultationPage } from './pages/ConsultationPage';
-import { FormPage } from './pages/Form/FormPage';
+import { FormPage } from './pages/FormPage';
+import { FormRequest } from './pages/FormPage/FormRequest/FormRequest';
 
 export const App = () => (
   <AnimatePresence>
@@ -29,6 +30,7 @@ export const App = () => (
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/consultation" element={<ConsultationPage />} />
             <Route path='/form' element={<FormPage />} />
+            <Route path="/form-request" element={<FormRequest />} />
           </Routes>            
         </div>
 

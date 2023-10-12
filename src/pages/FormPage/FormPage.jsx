@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
 import './FormPage.scss';
+
+import sendMessage from '../../requests/sendMessage'; 
+import formatFormData from '../../helpers/formatFormData.js';
+
 import { motion } from 'framer-motion';
 
 export const FormPage = () => {
@@ -13,6 +17,8 @@ export const FormPage = () => {
 
   const [errors, setErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -46,7 +52,20 @@ export const FormPage = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const resetForm = () => {
+    // Функція для скидання форми на початковий стан
+    setFormData({
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+      description: '',
+    });
+    setErrors({});
+    setIsFormValid(null);
+    setErrorMessage(null);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const isValid = validateForm();
     setIsFormValid(isValid);
@@ -59,8 +78,34 @@ export const FormPage = () => {
       };
 
       console.log('Дані, готові до відправки:', dataToSend);
+      window.location.href = '#/form-request';
+
+      const message = formatFormData(dataToSend);
+
+      try {
+        const result = await sendMessage(message, { throwIfFailed: false });
+
+        if (!result.ok) {
+          // Request failed
+          setErrorMessage('Помилка під час відправки запиту. Спробуйте ще раз.');
+        } else {
+          // Request OK
+          // Скидуємо форму або виконуємо інші дії для успішного запиту
+          resetForm(); // Скидання форми
+        }
+      } catch (err) {
+        // Do something with error...
+        setErrorMessage('Сталася помилка під час відправки запиту. Спробуйте ще раз або зверніться до служби підтримки.');
+      }
     }
   };
+
+  useEffect(() => {
+    if (errorMessage) {
+      // Якщо є помилка, виводимо її в консоль
+      console.error(errorMessage);
+    }
+  }, [errorMessage]);
 
   return (
     <motion.div 
@@ -139,13 +184,13 @@ export const FormPage = () => {
             </div>
           </div>
           {errors.phoneNumber && (
-                <p className="input-message error">{errors.phoneNumber}</p>
-              )}
-              {isFormValid !== null && !errors.phoneNumber && (
-                <p className={`input-message ${isFormValid ? 'success' : 'error'}`}>
-                  {isFormValid ? 'Вірно' : 'Не вірно'}
-                </p>
-              )}
+            <p className="input-message error">{errors.phoneNumber}</p>
+          )}
+          {isFormValid !== null && !errors.phoneNumber && (
+            <p className={`input-message ${isFormValid ? 'success' : 'error'}`}>
+              {isFormValid ? 'Вірно' : 'Не вірно'}
+            </p>
+          )}
           <div>
             <label className='form-text' htmlFor="description">Ваше питання</label>
             <div className="input-container">
@@ -160,10 +205,10 @@ export const FormPage = () => {
               />
             </div>
             {isFormValid !== null && !errors.description && (
-                <p className={`input-message ${isFormValid ? 'success' : 'error'}`}>
-                  {isFormValid ? 'Вірно' : 'Не вірно'}
-                </p>
-              )}
+              <p className={`input-message ${isFormValid ? 'success' : 'error'}`}>
+                {isFormValid ? 'Вірно' : 'Не вірно'}
+              </p>
+            )}
           </div>
           <button
             className="form--button" 
@@ -173,6 +218,11 @@ export const FormPage = () => {
             Відправити
           </button>
         </form>
+        {errorMessage && (
+          <div className="error-message">
+            {errorMessage}
+          </div>
+        )}
       </div>
     </motion.div>
   );
