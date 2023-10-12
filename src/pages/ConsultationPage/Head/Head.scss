@@ -2,8 +2,11 @@
 
 .head {
   background: url("../../../images/consultation/consultation-head.png")  no-repeat center;
-  background-size: contain;
+  background-size: cover;
+  margin: 0 auto;
   width: 100vw;
+  max-width: 1440px;
+
   height: 710px;
 
   color: $c-white;
@@ -16,9 +19,9 @@
   }
 
   @include onMobile {
-    background-position: center;
-    background-size: auto;
+    background-position: center 10px;
     height: 376px;
+    padding-top: 20px
   }
 
   &--title {

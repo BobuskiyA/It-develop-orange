@@ -1,32 +1,43 @@
 @import "../../../styles/global-imports";
 
 .add {
+  display: flex;
+  align-items: center;
+
   margin-top: 100px;
   background: url("../../../images/consultation/consultation-add.png")  no-repeat center;
   width: 100vw;
+  max-width: 1440px;
   height: 710px;
 
   color: $c-white;
 
-  display: flex;
-  align-items: center;
-
   @include onTablet {
-    background-position: center;
     background-size: auto;
   }
 
   @include onMobile {
     background-position: center;
     background-size: auto;
-    height: 376px;
+    height: 276px;
   }
 
   &--title {
     @extend %italic-text;
+    margin-bottom: 20px;
+
+    @include onMobile {
+      font-size: 25px;
+      line-height: 35px;
+    }
   }
 
   &--text {
     text-wrap: pretty;
+    margin-bottom: 25px;
+
+    @include onMobile {
+      font-size: 16px;
+    }
   }
 }

@@ -8,16 +8,17 @@
   margin: 0 auto;
 
   width: 100vw;
+  max-width: 1440px;
+
   height: 776px;
-  background: url("../../../images/services/services-head.png") center no-repeat;
-  filter: grayscale(100%) sepia(100%) hue-rotate(340deg);
+  background: url("../../../images/services/services.png") center no-repeat;
+  background-size: cover;
 
   @include onTablet {
     height: 556px;
   }
   
   @include onMobile {
-    background-image: url("../../../images/services/services-head-mobile.png");
     height: 326px;
   }
 
