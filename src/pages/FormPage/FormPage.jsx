@@ -7,6 +7,8 @@ import formatFormData from '../../helpers/formatFormData.js';
 
 import { motion } from 'framer-motion';
 
+import { BackToUp } from '../../components/BackToUp/BackToUp';
+
 export const FormPage = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -214,6 +216,7 @@ export const FormPage = () => {
             className="form--button" 
             type="submit" 
             id="submitButton"
+            onClick={BackToUp}
           >
             Відправити
           </button>

@@ -23,7 +23,13 @@ export const ServicesPage = () => (
       <ServicesDescription />
 
       <ul className="services-page__list">
-        {ServicesCardContent.map(({ id, photo_link, title, content }) => {
+        {ServicesCardContent.map(({ 
+          id, 
+          photo_link, 
+          title, 
+          content,
+          price
+        }) => {
           return id !== 4 ? (
             <ServicesCard
               key={id}
@@ -31,6 +37,7 @@ export const ServicesPage = () => (
               photo_link={photo_link}
               title={title}
               content={content}
+              price={price}
             />
           ) : null
         })}
@@ -44,7 +51,12 @@ export const ServicesPage = () => (
         modules={[Pagination]}
         className="services-page__slider"
       >
-        {ServicesCardContent.map(({ id, photo_link, title, content }) => {
+        {ServicesCardContent.map(({  id, 
+          photo_link, 
+          title, 
+          content,
+          price
+        }) => {
           return id !== 4 ? (
             <SwiperSlide key={id}> 
               <ServicesCard
@@ -52,6 +64,7 @@ export const ServicesPage = () => (
                 photo_link={photo_link}
                 title={title}
                 content={content}
+                price={price}
               />
             </SwiperSlide>
           ) : null;

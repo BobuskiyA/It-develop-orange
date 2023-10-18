@@ -5,8 +5,8 @@ import analyticsImage from '../../../images/services/analytics-card.png'
 
 import './ServicesCard.scss';
 
-const getPhotoLink = (link_image) => {
-  switch(link_image) {
+const getPhotoLink = (linkImage) => {
+  switch(linkImage) {
     case 'design':
       return designImage;
 
@@ -26,6 +26,7 @@ export const ServicesCard = ({
   photo_link,
   title,
   content,
+  price
 }) => (
   <div className="services-card">
     <li 
@@ -43,6 +44,12 @@ export const ServicesCard = ({
         <p className="services-card__item--text">
           {content}
         </p>
+
+      {price && (
+        <h4 className="services-card__item--price">
+          {`Від ${price}`}
+        </h4>
+      )}
       </div>
 
       <div className="services-card--button">
